@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>天气-微风</title>
+  <style>
+  /*breeze*/
+
+  .breeze-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 260px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 200%;
+    color: #fff;
+    background: #00BBFF;
+    border-radius: 5px;
+  }
+
+  .breeze-container:after {
+    content: "";
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 70px;
+    background: #fff;
+  }
+
+  .breeze {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(1deg);
+    border-bottom: 60px solid #fff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    animation: windmill 12s infinite linear;
+    transform-origin: 50.5% 62px;
+  }
+
+  .breeze:before {
+    position: absolute;
+    top: 75px;
+    left: -59px;
+    content: "";
+    border-right: 60px solid #fff;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    transform: rotate(-30deg);
+  }
+
+  .breeze:after {
+    position: absolute;
+    top: 75px;
+    left: -1px;
+    content: "";
+    border-left: 60px solid #fff;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    transform: rotate(30deg);
+  }
+
+  @keyframes windmill {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  </style>
+</head>
+
+<body>
+  <div class="css-cell">
+    <div class="breeze-container">
+      <div class="breeze"></div>
+    </div>
+  </div>
+</body>
+
+</html>
